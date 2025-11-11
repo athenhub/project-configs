@@ -8,7 +8,7 @@ management:
         include: refresh
 
 message:
-  test1: '(수정) 테스트 메세지 1'
-  test2: '(수정) 테스트 메세지 2'
+  test1: '(재 수정) 테스트 메세지 1'
+  test2: '(재 수정) 테스트 메세지 2'
 
-message3: '(수정) 테스트 메세지 3'
+message3: '(재 수정) 테스트 메세지 3'

@@ -1,5 +1,5 @@
 server:
-  port: 9011
+  port: 9023
 
 spring:
   jpa:
@@ -9,4 +9,4 @@ spring:
     open-in-view: false  # OSIV(Open Session In View) 기능 끔
     properties:
       hibernate:
-        default_schema: hub_service # 이 서비스에서 기본으로 사용할 DB 스키마 이름
+        default_schema: vendor_service # 이 서비스에서 기본으로 사용할 DB 스키마 이름

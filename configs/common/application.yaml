@@ -7,15 +7,11 @@ spring:
   datasource:
     url: jdbc:postgresql://athenhub-db.cj42m84s0lzn.ap-northeast-2.rds.amazonaws.com:5432/postgres
     username: postgres
-    password: ${DB_PASSWORD}        # EC2 환경 변수나 GitHub Actions에서 주입
     driver-class-name: org.postgresql.Driver
 
   jpa:
     hibernate:
       ddl-auto: update              # 개발 중에는 create / create-drop 가능, 나중에 validate/none 권장
-    properties:
-      hibernate:
-        default_schema: ${athenhub.schema:public}  # 👉 각 서비스가 이 값을 override
     show-sql: true
     open-in-view: false
 

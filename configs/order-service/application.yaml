@@ -1,12 +1,8 @@
 server:
-  port: 9014
+  port: 9013
 
 spring:
   jpa:
-    hibernate:
-      ddl-auto: update # 엔티티 변경사항을 기준으로 DB 테이블 구조를 자동으로 업데이트함
-    show-sql: true  # 실행되는 SQL을 콘솔에 출력
-    open-in-view: false  # OSIV(Open Session In View) 기능 끔
     properties:
       hibernate:
         default_schema: order_service # 이 서비스에서 기본으로 사용할 DB 스키마 이름

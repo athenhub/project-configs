@@ -9,12 +9,6 @@ spring:
     username: postgres
     driver-class-name: org.postgresql.Driver
 
-  jpa:
-    hibernate:
-      ddl-auto: update              # 개발 중에는 create / create-drop 가능, 나중에 validate/none 권장
-    show-sql: true
-    open-in-view: false
-
 feign:
   client:
     config:

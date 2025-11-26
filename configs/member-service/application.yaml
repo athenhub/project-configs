@@ -2,6 +2,16 @@ server:
   port: 9012
 
 spring:
+  cloud:
+    gateway:
+      routes:
+        - id: member-service
+          uri: lb://member-service
+          predicates:
+            - Path=/v1/member/**
+          filters:
+            - 'RewritePath=/v1/member/(?<path>.*), /\${path}'
+
   jpa:
     properties:
       hibernate:

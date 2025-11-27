@@ -3,11 +3,6 @@ spring:
     loadbalancer:
       ribbon:
         enabled: false # Netflix Ribbon 대신 Spring Cloud LoadBalancer 사용
-  ### 공통 DB 설정
-  datasource:
-    url: jdbc:postgresql://athenhub-db.cj42m84s0lzn.ap-northeast-2.rds.amazonaws.com:5432/postgres
-    username: postgres
-    driver-class-name: org.postgresql.Driver
 
 feign:
   client:

@@ -1,15 +1,29 @@
 spring:
   cloud:
     gateway:
+      globalcors:
+        cors-configurations:
+          '[/**]': # 모든 경로에 적용
+            allowedOrigins: "*"
+            allowedMethods: "*"
+            allowedHeaders: "*"
+            allowCredentials: true
       discovery:
         locator:
           enabled: true
           lower-case-service-id: true
 
       routes:
-        - id: hub-service
-          uri: lb://hub-service
+        - id: product-service
+          uri: lb://product-service
           predicates:
-            - Path=/v1/hub/**
+            - Path=/v1/product/**
           filters:
-            - 'RewritePath=/v1/hub/(?<path>.*), /\${path}'
+            - 'RewritePath=/v1/product/(?<path>.*), /\${path}'
+
+        - id: member-service
+          uri: lb://member-service
+          predicates:
+            - Path=/v1/member/**
+          filters:
+            - 'RewritePath=/v1/member/(?<path>.*), /\${path}'

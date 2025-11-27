@@ -5,4 +5,4 @@ spring:
   jpa:
     properties:
       hibernate:
-        default_schema: shippingagent_service # 이 서비스에서 기본으로 사용할 DB 스키마 이름
+        default_schema: shipping_service # 이 서비스에서 기본으로 사용할 DB 스키마 이름

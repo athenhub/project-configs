@@ -22,6 +22,6 @@ spring:
         - id: member-service
           uri: lb://member-service
           predicates:
-            - Path=/hub/**
+            - Path=/member
           filters:
             - 'RewritePath=/member/(?<path>.*), /\${path}'

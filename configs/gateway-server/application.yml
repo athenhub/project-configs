@@ -10,6 +10,18 @@ spring:
         - id: hub-service
           uri: lb://hub-service
           predicates:
-            - Path=/v1/hub/**
+            - Path=/hub/**
           filters:
-            - 'RewritePath=/v1/hub/(?<path>.*), /\${path}'
+            - 'RewritePath=/hubs/(?<path>.*), /\${path}'
+        - id: product-service
+          uri: lb://product-service
+          predicates:
+            - Path=/product/**
+          filters:
+            - 'RewritePath=/products/(?<path>.*), /\${path}'
+        - id: member-service
+          uri: lb://member-service
+          predicates:
+            - Path=/hub/**
+          filters:
+            - 'RewritePath=/members/(?<path>.*), /\${path}'
